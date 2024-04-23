@@ -1,19 +1,21 @@
 "use client";
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import Sidebar from "../SideBar";
+import SubPage from "../SubPage";
 
 interface PageProps {
     children?: ReactNode;
-  }
+}
 
 export default function PageContainer({
     children,
-  }: PageProps)
-{
+}: PageProps) {
     return (
         <div className="page-container">
             <Sidebar />
-            {children}
+            <SubPage>
+                {children}
+            </SubPage>
         </div>
-      );
+    );
 }

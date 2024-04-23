@@ -1,0 +1,22 @@
+.btn {
+    padding: 6px 12px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 18.96px;
+    font-weight: 400;
+    background-color: inherit;
+    border: 0px;
+    border-radius: 5px;
+    height: 40px;
+    width: 200px;
+}
+
+.btn-primary {
+    background-color: #007FBA;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #007fbabd;
+}
+

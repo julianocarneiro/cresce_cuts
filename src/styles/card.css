@@ -1,0 +1,30 @@
+.card {
+    background-color: #fff;
+    border: 1px solid #EBEDEE;
+    border-radius: 5px;
+    font-family: "Rubik", sans-serif;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    color: #455A64;
+    font-size: 20px;
+    line-height: 23.7px;;
+    font-weight: 400;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #EBEDEE;
+}
+
+.card-body {
+
+}
+
+.card-footer {
+
+}
+
+

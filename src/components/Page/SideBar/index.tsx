@@ -28,7 +28,7 @@ export default function Sidebar() {
                                     loading="lazy"
                                     src="/assets/imgs/icons/svg/menu_ico.svg"
                                     alt="Clientes"
-                                    />
+                                />
                             </div>
                             Lista descontos
                         </div>
@@ -40,7 +40,7 @@ export default function Sidebar() {
                                 loading="lazy"
                                 src="/assets/imgs/icons/svg/chevron.svg"
                                 alt="chevron"
-                                />
+                            />
                         </div>
                     </div>
                 </Link>
@@ -56,7 +56,7 @@ export default function Sidebar() {
                                     loading="lazy"
                                     src="/assets/imgs/icons/svg/menu_ico.svg"
                                     alt="Clientes"
-                                    />
+                                />
                             </div>
                             Menu
                         </div>
@@ -68,7 +68,7 @@ export default function Sidebar() {
                                 loading="lazy"
                                 src="/assets/imgs/icons/svg/chevron.svg"
                                 alt="chevron"
-                                />
+                            />
                         </div>
                     </div>
                 </Link>
@@ -84,7 +84,7 @@ export default function Sidebar() {
                                     loading="lazy"
                                     src="/assets/imgs/icons/svg/menu_ico.svg"
                                     alt="Clientes"
-                                    />
+                                />
                             </div>
                             Menu
                         </div>
@@ -96,7 +96,7 @@ export default function Sidebar() {
                                 loading="lazy"
                                 src="/assets/imgs/icons/svg/chevron.svg"
                                 alt="chevron"
-                                />
+                            />
                         </div>
                     </div>
                 </Link>
@@ -112,7 +112,7 @@ export default function Sidebar() {
                                     loading="lazy"
                                     src="/assets/imgs/icons/svg/menu_ico.svg"
                                     alt="Clientes"
-                                    />
+                                />
                             </div>
                             Menu
                         </div>
@@ -124,12 +124,12 @@ export default function Sidebar() {
                                 loading="lazy"
                                 src="/assets/imgs/icons/svg/chevron.svg"
                                 alt="chevron"
-                                />
+                            />
                         </div>
                     </div>
                 </Link>
 
-                
+
             </div>
         </>
     )

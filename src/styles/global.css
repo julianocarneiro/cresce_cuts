@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
     --max-width: 1100px;
@@ -115,8 +115,33 @@ a {
 }
 
 /* Layout */
-
 .page-container {
     background-color: #F9F9F9;
     min-height: 100vh;
+}
+
+.subpage {
+    margin-left: 256px;
+    padding: 15px;
+    color: #37474F;
+}
+
+.subpage .title {
+    margin-top: 88px;
+    margin-bottom: 24px;
+    font-family: "Rubik", sans-serif;
+}
+
+.subpage .title h1{
+    font-size: 32px;
+    line-height: 37.92px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.subpage .title span{
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 16.59px;
+    font-weight: 400;
 }
