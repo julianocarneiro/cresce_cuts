@@ -7,7 +7,7 @@ interface CardFooterProps {
 
 export default function CardFooter({ children }: CardFooterProps) {
     return (
-        <div className="card-header">
+        <div className="card-footer">
             {children}
         </div>
     );

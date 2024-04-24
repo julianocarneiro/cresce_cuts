@@ -1,6 +1,10 @@
 import Button from "@/components/Button";
 import { Card } from "@/components/Card";
 
+import "./style.css";
+import Filters from "./components/Filters";
+import Datatable from "./components/Datatable";
+
 export default function Descontos() {
     return (
         <>
@@ -15,11 +19,14 @@ export default function Descontos() {
                     <Button type="primary">Novo Desconto</Button>
                 </Card.Header>
                 <Card.Body>
-                    tabela
+
+                    <Filters />
+                    <Datatable />
+                   
                 </Card.Body>
             </Card.Root>
-            
 
-        </>        
+
+        </>
     );
 }

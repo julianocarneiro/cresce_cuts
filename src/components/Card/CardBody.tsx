@@ -7,7 +7,7 @@ interface CardBodyProps {
 
 export default function CardBody({ children }: CardBodyProps) {
     return (
-        <div className="card-header">
+        <div className="card-body">
             {children}
         </div>
     );

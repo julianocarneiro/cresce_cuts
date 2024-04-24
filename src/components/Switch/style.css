@@ -1,0 +1,35 @@
+.switch-container {
+    display: inline-block;
+    position: relative;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-label {
+    display: block;
+    width: 27px;
+    height: 11px;
+    border-radius: 13px;
+    background-color: #007fba5b;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch-inner {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #007FBA;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    transition: left 0.3s ease;
+}
+
+.switch-input:checked+.switch-label .switch-inner {
+    left: 14px;
+}
+
