@@ -1,16 +1,19 @@
-
+"use client";
 import { Card } from "@/components/Card";
-
 import Switch from "@/components/Switch";
 import InputText from "@/components/Form/InputText";
 import InputSelect from "@/components/Form/InputSelect";
 import LineGroup from "./components/LineGroup";
-import "./style.css";
 import ImageUploader from "@/components/ImageUploader";
 import InputDate from "@/components/Form/InputDate";
+import { useAppContext } from "@/context/AppContext";
 
+import "./style.css";
 
 export default function Cadastrar() {
+    
+
+    const { app } = useAppContext();
 
     const tipos_lista = [
         {
@@ -31,7 +34,7 @@ export default function Cadastrar() {
         <>
             <div className="title">
                 <h1>Cadastrar desconto</h1>
-                <span>Loja: Super João - Nova loja online</span>
+                <span>Loja: {app.loja}</span>
             </div>
 
             <Card.Root>

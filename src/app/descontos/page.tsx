@@ -1,16 +1,21 @@
+"use client";
 import Button from "@/components/Button";
 import { Card } from "@/components/Card";
-
-import "./style.css";
 import Filters from "./components/Filters";
 import Datatable from "./components/Datatable";
+import { useAppContext } from "@/context/AppContext";
+
+import "./style.css";
 
 export default function Descontos() {
+
+    const { app } = useAppContext();
+
     return (
         <>
             <div className="title">
                 <h1>Lista de Descontos</h1>
-                <span>Loja: Super João - Nova loja online</span>
+                <span>Loja: {app.loja}</span>
             </div>
 
             <Card.Root>
