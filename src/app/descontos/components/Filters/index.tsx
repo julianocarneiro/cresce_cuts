@@ -1,23 +1,34 @@
-
-// componente Filters
+import InputGroup from "@/components/Form/InputGroup";
+import InputSelect from "@/components/Form/InputSelect";
+import styles from "./styles.module.css";
 
 export default function Filters() {
+
+    const filter_status_values = [
+        {
+            value: "ativo",
+            label: "Ativo"
+        },
+        {
+            value: "inativo",
+            label: "Inativo"
+        }
+    ];
+    const filter_status_tipos_desconto = [
+        {
+            value: "desconto",
+            label: "Desconto"
+        },
+        {
+            value: "cupom",
+            label: "Cupom"
+        }
+    ];
+
     return (
-        <div className="filters">
-            <div className="input-group">
-                <label htmlFor="filter_status">Status</label>
-                <select id="filter_status" name="filter_status" >
-                    <option value="">Ativo</option>
-                    <option value="">Inativo</option>
-                </select>
-            </div>
-            <div className="input-group">
-                <label htmlFor="filter_tipo_desconto">Tipo desconto</label>
-                <select id="filter_tipo_desconto" name="filter_tipo_desconto">
-                    <option value="">Desconto</option>
-                    <option value="">Cupom</option>
-                </select>
-            </div>
+        <div className={styles.filters}>
+            <InputSelect title="Status" id="filter_status" values={filter_status_values}/>
+            <InputSelect title="Tipo desconto" id="filter_tipo_desconto" values={filter_status_tipos_desconto}/>
         </div>
     );
 }

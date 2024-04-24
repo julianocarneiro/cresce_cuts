@@ -1,37 +1,3 @@
-.filters {
-    padding: 24px 16px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.input-group {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.input-group label {
-    font-size: 16px;
-    line-height: 18.96px;
-    font-weight: 400;
-    color: #455A64;
-    margin-bottom: 8px;
-}
-
-.input-group select {
-    width: 100%;
-    height: 40px;
-    border: 1px solid #EBEDEE;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    line-height: 18.96px;
-    font-weight: 400;
-    color: #455A64;
-}
-
-
 
 
 .product_group {
@@ -58,3 +24,4 @@
     gap: 10px;
     padding: 24px 16px;
 }
+
