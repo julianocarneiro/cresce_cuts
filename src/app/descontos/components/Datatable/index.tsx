@@ -1,8 +1,18 @@
+import { useRouter } from "next/navigation";
 import Switch from "@/components/Switch";
 import ProductGroup from "../ProductGroup";
 import ShowIcon from "../ShowIcon";
+import Link from "next/link";
 
 export default function Datatable() {
+
+
+    const router = useRouter();
+
+    const handleShow = (id: number) => {
+        router.push(`/descontos/show/${id}`);
+    }
+
     return (
         <>
             <table className="table">
@@ -22,9 +32,9 @@ export default function Datatable() {
                         <td>30/12/2023 - 10:25</td>
                         <td>30/12/2023 - 10:25</td>
                         <td width='5%'>
-                            <div className="table_actions"> 
+                            <div className="table_actions">
                                 <Switch />
-                                <ShowIcon />
+                                <ShowIcon id={11} onClick={handleShow}/>
                             </div>
                         </td>
                     </tr>
@@ -36,7 +46,7 @@ export default function Datatable() {
                         <td width='5%'>
                             <div className="table_actions"> 
                                 <Switch />
-                                <ShowIcon />
+                                <ShowIcon id={12} onClick={handleShow}/>
                             </div>
                         </td>
                     </tr>
@@ -48,7 +58,7 @@ export default function Datatable() {
                         <td width='5%'>
                             <div className="table_actions"> 
                                 <Switch />
-                                <ShowIcon />
+                                <ShowIcon id={13} onClick={handleShow}/>
                             </div>
                         </td>
                     </tr>

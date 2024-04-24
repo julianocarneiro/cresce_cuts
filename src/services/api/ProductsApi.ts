@@ -3,7 +3,6 @@ import axios, { BASE_URL } from '../BaseService';
 const RESOURCE = 'products';
 const API_URL = `${BASE_URL}/${RESOURCE}`;
 
-
 class ProductsApi
 {
 

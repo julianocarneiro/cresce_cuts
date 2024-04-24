@@ -1,9 +1,22 @@
 import Image from "next/image";
 
-export default function ShowIcon() {
+interface PageProps {
+    id: number;
+    onClick?: ( id:number ) => void;
+}
+
+export default function ShowIcon({
+    id,
+    onClick
+}: PageProps) {
+
+    const handleClick = () => {
+        if(onClick) onClick(id);
+    }
+
     return (
         <>
-            <div className="">
+            <div className="" onClick={handleClick}>
                 <Image
                     width={28}
                     height={28}

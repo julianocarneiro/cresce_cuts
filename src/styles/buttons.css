@@ -20,3 +20,16 @@
     background-color: #007fbabd;
 }
 
+.btn-secondary {
+    border: 1px solid #007FBA;
+    color: #007FBA;
+}
+
+.btn-secondary:hover {
+    background-color: #007FBA;
+    color: white;
+}
+
+.btn-max-width{
+    width: 100%;
+}
