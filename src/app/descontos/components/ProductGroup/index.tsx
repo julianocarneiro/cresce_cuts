@@ -1,14 +1,18 @@
 import MoveIcon from "../MoveIcon";
 import ProductImage from "../ProductImage";
 
-export default function ProductGroup()
+interface PageProps {
+    item: any;
+}
+
+export default function ProductGroup({ item }: PageProps)
 {
     return (
         <div className="product_group">
             <MoveIcon />
-            <ProductImage />
+            <ProductImage src={item.image}/>
             <span className="product_name">
-                Biscoito integral cereale Cacau 150g
+                {item.description}
             </span>
         </div>
     )

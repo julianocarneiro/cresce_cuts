@@ -36,6 +36,7 @@
     text-align: left;
 }
 
+.table .selected,
 .table tbody tr:hover {
     background-color: #F9FAFB;
 }

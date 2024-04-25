@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export default function ProductImage() {
+interface PageProps {
+    src: string;
+}
+
+export default function ProductImage({ src }: PageProps) {
     return (
         <>
             <div className="product_img">
@@ -8,7 +12,7 @@ export default function ProductImage() {
                     width={50}
                     height={50}
                     loading="lazy"
-                    src="/assets/imgs/products/mini/image1.png"
+                    src={src}
                     alt="product image"
                 />
             </div>

@@ -1,21 +1,45 @@
+"use client";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Switch from "@/components/Switch";
 import ProductGroup from "../ProductGroup";
 import ShowIcon from "../ShowIcon";
 import Link from "next/link";
 
-export default function Datatable() {
+interface PageProps {
+    data: [];
+    selected?: (id: number) => void;
+}
 
+export default function Datatable({
+    data,
+    selected
+}: PageProps) {
 
+    
     const router = useRouter();
+    const [selectedRow, setSelectedRow] = useState<number>(0);
 
     const handleShow = (id: number) => {
         router.push(`/descontos/show/${id}`);
     }
 
+    const handleSelect = (e: any) => {
+        const id: number = e.target.closest('tr').getAttribute('data-id');
+        if(!id) return;
+        if (selectedRow === id) {
+            setSelectedRow(0);
+            if (selected) selected(0);
+            return;
+        }
+        setSelectedRow(id);
+        if (selected) selected(id);
+    };
+
     return (
         <>
-            <table className="table">
+        {selectedRow}
+            <table className="table" onClick={handleSelect}>
                 <thead>
                     <tr>
                         <th>Desconto</th>
@@ -26,42 +50,23 @@ export default function Datatable() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><ProductGroup /></td>
-                        <td>Leve + Pague -</td>
-                        <td>30/12/2023 - 10:25</td>
-                        <td>30/12/2023 - 10:25</td>
-                        <td width='5%'>
-                            <div className="table_actions">
-                                <Switch />
-                                <ShowIcon id={11} onClick={handleShow}/>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><ProductGroup /></td>
-                        <td>Leve + Pague -</td>
-                        <td>30/12/2023 - 10:25</td>
-                        <td>30/12/2023 - 10:25</td>
-                        <td width='5%'>
-                            <div className="table_actions"> 
-                                <Switch />
-                                <ShowIcon id={12} onClick={handleShow}/>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><ProductGroup /></td>
-                        <td>Leve + Pague -</td>
-                        <td>30/12/2023 - 10:25</td>
-                        <td>30/12/2023 - 10:25</td>
-                        <td width='5%'>
-                            <div className="table_actions"> 
-                                <Switch />
-                                <ShowIcon id={13} onClick={handleShow}/>
-                            </div>
-                        </td>
-                    </tr>
+                    {
+                        data && data.map((item: any, index: number) => (
+                            <tr key={index} data-id={item.id} className={selectedRow == item.id ? 'selected' : '' }>
+                                <td><ProductGroup item={item} /></td>
+                                <td>{item.type}</td>
+                                <td>{item.start_date}</td>
+                                <td>{item.end_date}</td>
+                                <td width='5%'>
+                                    <div className="table_actions">
+                                        <Switch />
+                                        <ShowIcon id={item.id} onClick={handleShow} />
+                                    </div>
+                                </td>
+                            </tr>
+                        ))
+                    }
+
                 </tbody>
             </table>
 
